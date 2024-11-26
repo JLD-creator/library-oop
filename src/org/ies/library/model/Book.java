@@ -18,7 +18,7 @@ public class Book {
     public Author hasAuthor(int NIF){
         for( Author autor: autors){
             if (autor.getNIF() == NIF){
-                return true;
+                return autor;
             }
         }
         return null;

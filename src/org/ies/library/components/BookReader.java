@@ -1,5 +1,5 @@
 package org.ies.library.components;
-import org.ies.library.model.Autor;
+import org.ies.library.model.Author;
 import org.ies.library.model.Book;
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class BookReader {
         scanner.nextLine();
         System.out.println("Cuantos autores hay");
         int size = scanner.nextInt();
-        Autor[]autors = new Autor[size];
+        Author[]autors = new Author[size];
         for (int i = 0; i < autors.length; i++) {
             autors[i] = authorReader.read();
         }

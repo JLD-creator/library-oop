@@ -2,12 +2,12 @@ package org.ies.library.model;
 
 import java.util.Objects;
 
-public class Autor {
+public class Author {
     private int NIF;
     private String nombre;
     private String apellidos;
 
-    public Autor(int NIF, String nombre, String apellidos) {
+    public Author(int NIF, String nombre, String apellidos) {
         this.NIF = NIF;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -41,7 +41,7 @@ public class Autor {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Autor autor = (Autor) o;
+        Author autor = (Author) o;
         return NIF == autor.NIF && Objects.equals(nombre, autor.nombre) && Objects.equals(apellidos, autor.apellidos);
     }
 

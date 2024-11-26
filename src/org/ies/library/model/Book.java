@@ -1,5 +1,4 @@
 package org.ies.library.model;
-import org.ies.library.model.Autor;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -8,13 +7,21 @@ public class Book {
     private int ISBN;
     private  String titulo;
     private int year;
-    private Autor[] autors;
+    private Author[] autors;
 
-    public Book(int ISBN, String titulo, int year, Autor[] autors) {
+    public Book(int ISBN, String titulo, int year, Author[] autors) {
         this.ISBN = ISBN;
         this.titulo = titulo;
         this.year = year;
         this.autors = autors;
+    }
+    public Author hasAuthor(int NIF){
+        for( Author autor: autors){
+            if (autor.getNIF() == NIF){
+                return true;
+            }
+        }
+        return null;
     }
 
     public int getISBN() {
@@ -41,11 +48,11 @@ public class Book {
         this.year = year;
     }
 
-    public Autor[] getAutors() {
+    public Author[] getAutors() {
         return autors;
     }
 
-    public void setAutors(Autor[] autors) {
+    public void setAutors(Author[] autors) {
         this.autors = autors;
     }
 

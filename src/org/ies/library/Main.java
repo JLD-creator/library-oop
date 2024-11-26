@@ -14,7 +14,8 @@ public class Main {
         AuthorReader authorReader = new AuthorReader(scanner);
         BookReader bookReader = new BookReader(scanner, authorReader);
         LibraryReader libraryReader = new LibraryReader(scanner, bookReader);
-        System.out.println(libraryReader);
+        Library library = libraryReader.read();
+        System.out.println(library);
 
     }
 }

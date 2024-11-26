@@ -11,9 +11,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        LibraryReader libraryReader = new LibraryReader(scanner, new BookReader(scanner, new AuthorReader(scanner)));
-        Library library =libraryReader.read();
-        System.out.println(library);
+        AuthorReader authorReader = new AuthorReader(scanner);
+        BookReader bookReader = new BookReader(scanner, authorReader);
+        LibraryReader libraryReader = new LibraryReader(scanner, bookReader);
+        System.out.println(libraryReader);
 
     }
 }

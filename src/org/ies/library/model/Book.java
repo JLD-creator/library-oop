@@ -5,18 +5,18 @@ import java.util.Objects;
 
 public class Book {
     private int ISBN;
-    private  String titulo;
+    private  String title;
     private int year;
-    private Author[] autors;
+    private Author[] authors;
 
-    public Book(int ISBN, String titulo, int year, Author[] autors) {
+    public Book(int ISBN, String title, int year, Author[] authors) {
         this.ISBN = ISBN;
-        this.titulo = titulo;
+        this.title = title;
         this.year = year;
-        this.autors = autors;
+        this.authors = authors;
     }
     public Author hasAuthor(int NIF){
-        for( Author autor: autors){
+        for( Author autor: authors){
             if (autor.getNIF() == NIF){
                 return autor;
             }
@@ -32,12 +32,12 @@ public class Book {
         this.ISBN = ISBN;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getYear() {
@@ -48,12 +48,12 @@ public class Book {
         this.year = year;
     }
 
-    public Author[] getAutors() {
-        return autors;
+    public Author[] getAuthors() {
+        return authors;
     }
 
-    public void setAutors(Author[] autors) {
-        this.autors = autors;
+    public void setAuthors(Author[] authors) {
+        this.authors = authors;
     }
 
     @Override
@@ -61,21 +61,21 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return ISBN == book.ISBN && year == book.year && Objects.equals(titulo, book.titulo) && Objects.deepEquals(autors, book.autors);
+        return ISBN == book.ISBN && year == book.year && Objects.equals(title, book.title) && Objects.deepEquals(authors, book.authors);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ISBN, titulo, year, Arrays.hashCode(autors));
+        return Objects.hash(ISBN, title, year, Arrays.hashCode(authors));
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "ISBN=" + ISBN +
-                ", titulo='" + titulo + '\'' +
+                ", titulo='" + title + '\'' +
                 ", year=" + year +
-                ", autors=" + Arrays.toString(autors) +
+                ", autors=" + Arrays.toString(authors) +
                 '}';
     }
 }

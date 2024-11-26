@@ -4,20 +4,20 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Library {
-    private String nombre;
+    private String name;
     private Book[] books;
 
-    public Library(String nombre, Book[] books) {
-        this.nombre = nombre;
+    public Library(String name, Book[] books) {
+        this.name = name;
         this.books = books;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Book[] getBooks() {
@@ -33,18 +33,18 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library that = (Library) o;
-        return Objects.equals(nombre, that.nombre) && Objects.deepEquals(books, that.books);
+        return Objects.equals(name, that.name) && Objects.deepEquals(books, that.books);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nombre, Arrays.hashCode(books));
+        return Objects.hash(name, Arrays.hashCode(books));
     }
 
     @Override
     public String toString() {
         return "Biblioteca{" +
-                "nombre='" + nombre + '\'' +
+                "nombre='" + name + '\'' +
                 ", books=" + Arrays.toString(books) +
                 '}';
     }

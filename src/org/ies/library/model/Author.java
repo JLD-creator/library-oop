@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Author {
     private int NIF;
-    private String nombre;
-    private String apellidos;
+    private String name;
+    private String surname;
 
-    public Author(int NIF, String nombre, String apellidos) {
+    public Author(int NIF, String name, String surname) {
         this.NIF = NIF;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.name = name;
+        this.surname = surname;
     }
 
     public int getNIF() {
@@ -21,20 +21,20 @@ public class Author {
         this.NIF = NIF;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     @Override
@@ -42,20 +42,20 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author autor = (Author) o;
-        return NIF == autor.NIF && Objects.equals(nombre, autor.nombre) && Objects.equals(apellidos, autor.apellidos);
+        return NIF == autor.NIF && Objects.equals(name, autor.name) && Objects.equals(surname, autor.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(NIF, nombre, apellidos);
+        return Objects.hash(NIF, name, surname);
     }
 
     @Override
     public String toString() {
         return "Autor{" +
                 "NIF=" + NIF +
-                ", nombre='" + nombre + '\'' +
-                ", apellidos='" + apellidos + '\'' +
+                ", nombre='" + name + '\'' +
+                ", apellidos='" + surname + '\'' +
                 '}';
     }
 }

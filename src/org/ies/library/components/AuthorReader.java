@@ -13,10 +13,10 @@ public class AuthorReader {
         int nif = scanner.nextInt();
         scanner.nextLine();
         System.out.println("nombre del autor");
-        String nombre = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("apellido del autor");
-        String apellido = scanner.nextLine();
-        return new Author(nif, nombre, apellido);
+        String surname = scanner.nextLine();
+        return new Author(nif, name, surname);
 
     }
 }

@@ -18,7 +18,7 @@ public class BookReader {
         int isbn = scanner.nextInt();
         scanner.nextLine();
         System.out.println("titulo del libro");
-        String titulo = scanner.nextLine();
+        String title = scanner.nextLine();
         System.out.println("Año");
         int year = scanner.nextInt();
         scanner.nextLine();
@@ -28,6 +28,6 @@ public class BookReader {
         for (int i = 0; i < autors.length; i++) {
             autors[i] = authorReader.read();
         }
-        return new Book(isbn, titulo, year,autors);
+        return new Book(isbn, title, year,autors);
     }
 }

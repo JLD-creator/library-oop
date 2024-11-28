@@ -15,8 +15,7 @@ public class BookReader {
 
     public Book read(){
         System.out.println("ISBN del libro");
-        int isbn = scanner.nextInt();
-        scanner.nextLine();
+        String isbn = scanner.nextLine();
         System.out.println("titulo del libro");
         String title = scanner.nextLine();
         System.out.println("Año");

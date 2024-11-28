@@ -4,18 +4,18 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Book {
-    private int ISBN;
+    private String ISBN;
     private  String title;
     private int year;
     private Author[] authors;
 
-    public Book(int ISBN, String title, int year, Author[] authors) {
+    public Book(String ISBN, String title, int year, Author[] authors) {
         this.ISBN = ISBN;
         this.title = title;
         this.year = year;
         this.authors = authors;
     }
-    public boolean hasAuthor(int NIF) {
+    public boolean hasAuthor(String NIF) {
         for (Author author : authors) {
             if (author.getNIF().equals(NIF)) {
                 return true;
@@ -24,11 +24,11 @@ public class Book {
         return false;
     }
 
-    public int getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
-    public void setISBN(int ISBN) {
+    public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 

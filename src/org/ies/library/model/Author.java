@@ -3,21 +3,21 @@ package org.ies.library.model;
 import java.util.Objects;
 
 public class Author {
-    private int NIF;
+    private String NIF;
     private String name;
     private String surname;
 
-    public Author(int NIF, String name, String surname) {
+    public Author(String NIF, String name, String surname) {
         this.NIF = NIF;
         this.name = name;
         this.surname = surname;
     }
 
-    public int getNIF() {
+    public String getNIF() {
         return NIF;
     }
 
-    public void setNIF(int NIF) {
+    public void setNIF(String NIF) {
         this.NIF = NIF;
     }
 

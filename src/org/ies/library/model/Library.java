@@ -66,10 +66,10 @@ public class Library {
         return count;
     }
 
-    public String findBook(String isbn) {
+    public Book findBook(String isbn) {
         for (Book book : books) {
             if (book.getISBN().equals(isbn)) {
-                return book.getTitle();
+                return book;
             }
         }
         return null;
